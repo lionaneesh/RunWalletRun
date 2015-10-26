@@ -1,0 +1,9 @@
+.reputation {
+	margin-left: 30px;
+	font-size: 20px;
+	padding: 5px;
+	color: white !important;
+}
+#membersince, #tradeban {
+	padding: 0;
+}
