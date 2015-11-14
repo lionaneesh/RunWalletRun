@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "ScamFreeSteam",
+  "name": "RunWalletRun",
   "description": "A chrome extension that calculate's a \"legit\" rating for a steam profile. It allows you to detect scammers on steam.",
   "version": "0.1",
 
  "content_scripts": [
     {
-      "matches": ["http://steamcommunity.com/id/*"],
+      "matches": ["http://steamcommunity.com/id/*", "http://steamcommunity.com/profiles/*"],
       "css": ["style.css"],
       "js": ["jquery.js", "main.js"]
     }
