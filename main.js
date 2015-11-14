@@ -5,13 +5,11 @@ $(document).ready(function() {
 
 		$(d).appendTo($(".profile_header_bg"))
 			.addClass("reputation");
-		$.get("http://steamrep.com/search?q=" + username, function(data) {
+		$.get("http://192.168.1.132:5000/" + username, function(data) {
 			console.log(data)
-			var page = $(data)
-			var membersince = page.find("#membersince").text()
-			var tradeban = page.find("#tradebanstatus").text()
-			$(".reputation").append("<p id=\"membersince\">MemberSince: " + membersince + "</p>")
-			$(".reputation").append("<p id=\"tradeban\">TradeBan: " + tradeban + "</p>")
-			$(".reputation").append(page.find("#reptags"))
+			var result1 = data["result1"];
+			var result2 = data["result2"];
+			$(".reputation").append("<p id=\"naive\">Is a scammer? (using Naive Bayes) : " + result1 + "</p>")
+			$(".reputation").append("<p id=\"tradeban\">Is a scammer? (using Random Forest) : " + result2 + "</p>")
 		});
 })

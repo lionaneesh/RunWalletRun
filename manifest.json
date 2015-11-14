@@ -13,7 +13,7 @@
     }
   ],
   "permissions": [
-  "http://steamrep.com/*"
+  "http://192.168.1.132:5000/*"
     /* TODO: Add backend url here. */
   ]
 }
