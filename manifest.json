@@ -13,7 +13,8 @@
     }
   ],
   "permissions": [
-  "http://192.168.1.132:5000/*",
+  "https://arcane-citadel-3126.herokuapp.com/*",
+  "https://limitless-beyond-9731.herokuapp.com/*",
   "http://steamrep.com/search?q=*"
     /* TODO: Add backend url here. */
   ]

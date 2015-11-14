@@ -2,10 +2,17 @@ $(document).ready(function() {
 	d = document.createElement('div');
 	var pathname = window.location.pathname;
 	var username = pathname.split("/")[2]
-
+	var time = new Date();
+	var hour = time.getHours();
+	var base_url;
+	if (hour < 12) {
+		base_url = "https://arcane-citadel-3126.herokuapp.com/";
+	} else {
+		base_url = "https://limitless-beyond-9731.herokuapp.com/";
+	}
 	$(d).appendTo($(".profile_header_bg"))
 		.addClass("reputation");
-	$.get("http://192.168.1.132:5000/" + username, function(data) {
+	$.get(base_url + username, function(data) {
 		console.log(data)
 		var result1 = data["result1"];
 		var result2 = data["result2"];
