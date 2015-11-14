@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var pathname = window.location.pathname;
 	var username = pathname.split("/")[2]
 	var time = new Date();
-	var hour = time.getHours();
+	var hour = time.getUTCDate();
 	var base_url;
 	if (hour < 12) {
 		base_url = "https://arcane-citadel-3126.herokuapp.com/";
