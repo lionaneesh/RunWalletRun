@@ -1,9 +1,32 @@
 .reputation {
-	margin-left: 30px;
-	font-size: 20px;
+	width: 100%;
+	background-color: #555555;
+	padding: 15px;
+	font-size: 15px;
 	padding: 5px;
+	font-family: Verdana,sans-serif;
 	color: white !important;
+	border: 1px solid black;
 }
-#membersince, #tradeban {
+#Rating, #SteamRep {
+	color: black;
 	padding: 0;
+}
+
+#moderate {
+	background: yellow;
+}
+
+#unsafe {
+	background: red;
+	color: white;
+}
+
+#safe {
+	background: green;
+}
+
+.badgetext {
+	color: white;
+	background: red;
 }
